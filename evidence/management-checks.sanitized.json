@@ -1,0 +1,101 @@
+{
+  "_publication": {
+    "notice": "Sanitized excerpts transcribed from the management-event JSON pasted during the lab, not an untouched export.",
+    "replacements": [
+      "Account, session, IP and security-group identifiers use example values."
+    ],
+    "omitted": [
+      "Credential identifiers",
+      "Internal principal and directory IDs",
+      "Request and event IDs",
+      "Unneeded request and response fields"
+    ]
+  },
+  "Records": [
+    {
+      "eventTime": "2026-10-15T04:18:03Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_LabBuilder_EXAMPLE/lab.user"
+      },
+      "sourceIPAddress": "198.51.100.10",
+      "errorCode": "Client.DryRunOperation",
+      "errorMessage": "Request would have succeeded, but DryRun flag is set.",
+      "requestParameters": {
+        "instanceType": "t2.micro"
+      },
+      "responseElements": null
+    },
+    {
+      "eventTime": "2026-10-15T04:18:57Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_LabBuilder_EXAMPLE/lab.user"
+      },
+      "sourceIPAddress": "198.51.100.10",
+      "errorCode": "Client.DryRunOperation",
+      "errorMessage": "Request would have succeeded, but DryRun flag is set.",
+      "requestParameters": {
+        "instanceType": "t2.micro"
+      },
+      "responseElements": null
+    },
+    {
+      "eventTime": "2026-10-15T04:22:26Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_LabBuilder_EXAMPLE/lab.user"
+      },
+      "sourceIPAddress": "198.51.100.10",
+      "errorCode": "Client.DryRunOperation",
+      "errorMessage": "Request would have succeeded, but DryRun flag is set.",
+      "requestParameters": {
+        "instanceType": "t2.micro"
+      },
+      "responseElements": null
+    },
+    {
+      "eventTime": "2026-10-15T05:33:10Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_LabBuilder_EXAMPLE/lab.user"
+      },
+      "sourceIPAddress": "198.51.100.10",
+      "requestParameters": {
+        "groupId": "sg-0123456789abcdef0",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "tcp",
+              "fromPort": 8080,
+              "toPort": 8080,
+              "ipRanges": {
+                "items": [
+                  {
+                    "cidrIp": "198.51.100.10/32",
+                    "description": "API access from my computer"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": {
+        "_return": true
+      }
+    }
+  ]
+}

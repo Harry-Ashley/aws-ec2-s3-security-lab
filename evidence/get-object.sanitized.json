@@ -1,0 +1,55 @@
+{
+  "_publication": {
+    "notice": "Sanitized excerpt for a public learning project. This is not an original CloudTrail export. Selected values preserve the observed results; identifying fields are replaced or omitted.",
+    "replacements": [
+      "Account IDs, instance ID, role-session identifiers, bucket name and source IP use consistent example values."
+    ],
+    "omitted": [
+      "accessKeyId",
+      "principalId",
+      "requestID",
+      "eventID",
+      "identity-store identifiers",
+      "internal network identifiers",
+      "full user-agent string",
+      "unneeded response and request fields"
+    ]
+  },
+  "Records": [
+    {
+      "eventTime": "2026-10-15T16:55:30Z",
+      "eventName": "GetObject",
+      "eventSource": "s3.amazonaws.com",
+      "awsRegion": "us-east-1",
+      "readOnly": true,
+      "managementEvent": false,
+      "eventCategory": "Data",
+      "responseElements": null,
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::222222222222:assumed-role/LabAppRole/i-0123456789abcdef0",
+        "sessionContext": {
+          "sessionIssuer": {
+            "userName": "LabAppRole"
+          },
+          "ec2RoleDelivery": "2.0"
+        }
+      },
+      "sourceIPAddress": "203.0.113.10",
+      "requestParameters": {
+        "bucketName": "example-security-lab-222222222222-data",
+        "key": "hello.txt"
+      },
+      "additionalEventData": {
+        "httpStatusCode": 200,
+        "objectSize": 34,
+        "bytesTransferredOut": 34,
+        "SignatureVersion": "SigV4",
+        "AuthenticationMethod": "AuthHeader"
+      },
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3"
+      }
+    }
+  ]
+}

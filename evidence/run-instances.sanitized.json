@@ -1,0 +1,67 @@
+{
+  "_publication": {
+    "notice": "Sanitized excerpt for a public learning project. This is not an original CloudTrail export. Selected values preserve the observed results; identifying fields are replaced or omitted.",
+    "replacements": [
+      "Account IDs, instance ID, role-session identifiers, bucket name and source IP use consistent example values."
+    ],
+    "omitted": [
+      "accessKeyId",
+      "principalId",
+      "requestID",
+      "eventID",
+      "identity-store identifiers",
+      "internal network identifiers",
+      "full user-agent string",
+      "unneeded response and request fields"
+    ]
+  },
+  "Records": [
+    {
+      "eventTime": "2026-10-15T04:40:38Z",
+      "eventName": "RunInstances",
+      "eventSource": "ec2.amazonaws.com",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::222222222222:assumed-role/AWSReservedSSO_LabBuilder_EXAMPLE/lab.user"
+      },
+      "sourceIPAddress": "198.51.100.10",
+      "requestParameters": {
+        "instanceType": "t2.micro",
+        "iamInstanceProfile": {
+          "arn": "arn:aws:iam::222222222222:instance-profile/LabAppRole"
+        },
+        "metadataOptions": {
+          "httpTokens": "required",
+          "httpPutResponseHopLimit": 1,
+          "httpEndpoint": "enabled"
+        },
+        "blockDeviceMapping": {
+          "items": [
+            {
+              "ebs": {
+                "volumeSize": 8,
+                "volumeType": "gp3",
+                "encrypted": true,
+                "deleteOnTermination": true
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {
+              "instanceId": "i-0123456789abcdef0",
+              "instanceState": {
+                "code": 0,
+                "name": "pending"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
